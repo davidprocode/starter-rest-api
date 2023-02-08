@@ -65,6 +65,12 @@ app.use('*', (req, res) => {
   res.json({ msg: 'no route handler found' }).end()
 })
 
+//home page
+
+app.get('/home', async (req, res) => {
+  res.render('src/pages/index.html')
+})
+
 // Start the server
 const port = process.env.PORT || 3000
 app.listen(port, () => {
